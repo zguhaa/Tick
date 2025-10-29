@@ -80,12 +80,44 @@ Contracts (later)
 
 ---
 
-## 2-Week Hackathon Plan
-**D1–3**: Auth, profiles, DB schema, leaderboard skeleton  
-**D4–7**: Duel create/join, timers, result worker, XP calc  
-**D8–10**: Leaderboards, profiles, anti-abuse basics  
-**D11–12**: Polish, seed data, demo script  
-**D13–14**: Landing, pitch deck, video
+## 3-Week Development Roadmap
+
+### Week 1 — Core Setup & Prototype
+- Project structure setup (frontend + backend base).  
+- Wallet connection (Phantom / Backpack).  
+- Static profile pages (XP, rank, basic layout).  
+- Mock duel data (JSON-based simulation).  
+- Landing page with project concept and visuals.  
+
+*Goal:* Have a working UI prototype with wallet connect and static duel preview.
+
+---
+
+### Week 2 — Logic & Leaderboards
+- Database integration (Supabase or Firebase).  
+- Create & join duel flow (mock logic for now).  
+- XP / rank calculation system (client-side simulation).  
+- Global leaderboard (real-time display from DB).  
+- Profile activity history.  
+
+*Goal:* Demonstrate full core loop — wallet connect → duel → XP update → leaderboard.
+
+---
+
+### Week 3 — Demo Polish & Expansion Prep
+- Visual polishing, animations, mobile layout.  
+- Add early anti-abuse logic (wallet lock, cooldown).  
+- Prepare demo script + video walkthrough.  
+- Create one-pager & investor-ready presentation.  
+- Setup dev environment for future on-chain logic (Jupiter integration later).  
+
+*Goal:* MVP-ready prototype and full visual demo for Colosseum review.
+
+---
+
+**Note:**  
+All on-chain data (PnL, ROI) will be mocked in the MVP.  
+Real blockchain integration (Helius/Jupiter APIs) planned post-hackathon.
 
 ---
 
