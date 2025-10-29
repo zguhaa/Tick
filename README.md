@@ -43,3 +43,71 @@ On-chain trading is fragmented and hard to measure. No persistent identity/reput
 ---
 
 ## Architecture (proposed)
+
+Frontend (Next.js + Tailwind)
+└─ Wallet Adapter (Phantom/Backpack)
+└─ UI State (Zustand)
+
+Index/Backend
+└─ Helius APIs for tx parsing & prices
+└─ Supabase/Postgres for profiles/duels/XP
+└─ CRON jobs to settle duels & recalc XP
+
+Contracts (later)
+└─ Minimal program for duel registry & SBT badges
+
+
+**Tech Stack**
+- **TS/Next.js**, **Tailwind**, **Solana Wallet Adapter**
+- **Supabase/Postgres**, **Helius**
+- **Jupiter** (quotes/swaps; post-MVP)
+- (opt) Cloudflare Workers
+
+---
+
+## Scoring
+- **PnL** = Σ(exits − entries) over duel window (whitelisted mints).
+- **ROI%** = PnL / capital used (capped).
+- **XP** = base per duel + win/streak/league bonus; seasonal decay.
+
+---
+
+## Anti-Abuse (v1)
+- Duel-locked wallet; cool-down.
+- Min trade count / volume threshold.
+- Detect hot-wallet hopping (recent transfer graph).
+- Public match logs + verifiable settlement.
+
+---
+
+## 2-Week Hackathon Plan
+**D1–3**: Auth, profiles, DB schema, leaderboard skeleton  
+**D4–7**: Duel create/join, timers, result worker, XP calc  
+**D8–10**: Leaderboards, profiles, anti-abuse basics  
+**D11–12**: Polish, seed data, demo script  
+**D13–14**: Landing, pitch deck, video
+
+---
+
+## Screens / Demo
+- `/docs/wireframes/landing.png`
+- `/docs/wireframes/duel-flow.png`
+*(placeholders; will update during hackathon)*
+
+---
+
+## Team
+**ZgCrypto (Founder/Product, BizDev, Growth)** — experience in meme-markets, trader psychology, community building.
+
+---
+
+## Links
+- Twitter (soon): `https://x.com/tick_sol`
+- One-pager: `/docs/Tick_OnePager.pdf` (WIP)
+- Colosseum submission: (add link)
+
+---
+
+## License
+TBD (MIT planned after hackathon).
+
